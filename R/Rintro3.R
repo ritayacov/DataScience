@@ -10,6 +10,7 @@ library(dplyr)
 
 #### transform a data.frame into a dplyr compatible data table
 class(iris)
+data_frame(iris)
 
 iris2 <- as_data_frame(iris)   ## function imported to dplyr from the 'tibble' package
 
@@ -50,12 +51,15 @@ iris2 <- iris2 %>%
   mutate(id = 1:nrow(iris2))
 
 iris3 <- inner_join(iris2, df1, by="id")
+iris3<- inner_jpin(iris3, df2, by=id)
 
+left_join(by=[id1=a])
+iris
 iris3
 
 #### order the data by a column
 iris3 %>%
-  arrange(Sepal.Length)
+  arrange(Sepal.Length))
 
 iris3 %>%
   arrange(desc(Petal.Width))
@@ -76,7 +80,7 @@ iris3 %>% group_by(Species) %>% summarise(cnt = n())
 head(starwars)
 
 starwars$films
-
+###מייצר משתנה חדש###
 mysw <- starwars %>%
   group_by(homeworld) %>% 
   mutate(male = ifelse(gender == "male",1,0),

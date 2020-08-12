@@ -370,10 +370,16 @@ df$c
 df$b
 
 df.false <- subset(df, c==FALSE)
-
+df.false[2,]
 ### changing the values of some rows in a variable based on a condition
-df
+df$a
+df2a<-df$a
+df2b<-df["a"]
 df$a[which(df$c==TRUE)] <- 0
+
+class(df2a)
+class(df2b)
+
 df
 
 ### deleting parts of the data frame
@@ -424,6 +430,7 @@ is.na(c)
 ### NULL deletes a column in a data frame 
 df <- mtcars
 df$mpg <- NULL
+df
 
 set.seed(4)
 names.vec <- c('Avi', 'Ben', 'Gad', 'Dan', 'Harel', 'Vered', 'Zelig')
