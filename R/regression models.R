@@ -100,6 +100,7 @@ library(readr)
 bodyfat <- read_csv("C:/Users/Rita/DataScience/data/bodyfat.csv")
 View(bodyfat)
 
+
 ############################################
 ##   Logistic Regression
 ############################################
